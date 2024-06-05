@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Transactions;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; set; }
+
 
     public void Awake()
     {
@@ -14,13 +17,8 @@ public class GameManager : MonoBehaviour
         else Destroy(this);
     }
 
-    private void Update()
+    public void Start()
     {
-        CheckClickableObject();
-    }
-
-    private void CheckClickableObject()
-    {
-
+        GridManager.Instance.EnGridOnScene();
     }
 }
