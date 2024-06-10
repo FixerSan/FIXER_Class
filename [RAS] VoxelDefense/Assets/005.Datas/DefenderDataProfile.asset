@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: DefenderDataProfile
+  m_EditorClassIdentifier: Assembly-CSharp::DefenderDataProfile
+  datas:
+  - index: 1000001
+    name: "\uC560\uAE30\uC22D\uC774"
+  - index: 1000002
+    name: "\uCCAD\uC18C\uB144\uBABD\uD0A4"
+  - index: 1000003
+    name: "\uC5B4\uB978\uBABD\uD0A4"
