@@ -40,3 +40,17 @@ public class DefenderDataProfile : ScriptableObject
 {
     public DefenderData[] datas;
 }
+
+[System.Serializable]
+public class EnemyData
+{
+    public int index;
+    public string name;
+    public float attackForce;
+}
+
+[CreateAssetMenu(menuName = "Container/EnemyDatas", fileName = "EnemyDataProfile")]
+public class EnemyDataProfile : ScriptableObject
+{
+    public EnemyData[] datas;
+}

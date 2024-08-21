@@ -15,9 +15,16 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
                     go = new GameObject($"@{typeof(T).Name}");
                     instance = go.AddComponent<T>();
                 }
+
                 else instance = go.GetComponent<T>();
 
-                DontDestroyOnLoad(go);
+                GameObject system = GameObject.Find("@System");
+                if (system == null)
+                {
+                    system = new GameObject("@System");
+                    DontDestroyOnLoad(go);
+                }
+                go.transform.SetParent(system.transform);
             }
             return instance;
         }

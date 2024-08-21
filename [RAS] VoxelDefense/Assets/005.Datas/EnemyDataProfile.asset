@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb9c12a8c6c949f7af83a3d238359d0, type: 3}
-  m_Name: vFolders Data
-  m_EditorClassIdentifier: 
-  folderDatasByGuid:
-    keys: []
-    values: []
+  m_Script: {fileID: 0}
+  m_Name: EnemyDataProfile
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDataProfile
+  datas:
+  - index: 0
+    name: "\uC81C\uB85C"
+    attackForce: 1

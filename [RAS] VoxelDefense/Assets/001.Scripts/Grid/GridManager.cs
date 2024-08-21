@@ -34,19 +34,20 @@ public class GridManager : MonoBehaviour
     }
 
     //그리드에 넣기
-    public void EnGrid(GridObject _gridObject, int _x, int _y, int _z, int _index = -1)
+    public bool EnGrid(GridObject _gridObject, int _x, int _y, int _z, int _index = -1)
     {
         //예외 처리
         if (grid.gridArray[_x, _y, _z] != null)
         {
             Debug.LogError($"[{_x}, {_y}, {_z}] 그리드가 비어있지 않습니다.");
-            return;
+            return false;
         }
 
         //그리드 오브젝트 초기화 및 그리드 배열에 넣기
         _gridObject.transform.position = new Vector3(_x, _y, _z) + gridOffset;
         grid.gridArray[_x, _y, _z] = _gridObject;
         _gridObject.Init(_x, _y, _z, _index);
+        return true;
     }
 
     //그리드 오브젝트 반환
